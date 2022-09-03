@@ -4,7 +4,7 @@ pipeline {
     stages {
         
         stage('Terraform Plan') {
-            when {
+            when { branch 'master'
                     expression {
                         params.ACTION == 'DEPLOY'
                     }
